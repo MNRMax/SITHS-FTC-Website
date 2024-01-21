@@ -1,6 +1,6 @@
 <template>
+    <SocialsComponent class="absolute top-16 left-2"/>
     <div class="h-[40vh]">
-
     </div>
     <div class="bg-[#e6e1f4] w-1/2 m-auto rounded-[1rem] text-center text-[3rem] font-[Orange-Milk] text-[#0042c7]">
         <h1 class="">Staten Island Tech's FTC Team</h1>
@@ -22,6 +22,7 @@ import { onMounted } from "vue";
 
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import SocialsComponent from "./SocialsComponent.vue";
 
 gsap.registerPlugin(ScrollTrigger);
 
