@@ -1,8 +1,8 @@
 @font-face {
     font-family: 'Orange-Milk'; 
-    src: url('src/assets/fonts/Orange Milk.ttf'); 
+    src: url('/fonts/Orange Milk.ttf'); 
 }
 @font-face {
     font-family: 'Cocogoose'; 
-    src: url('src/assets/fonts/Cocogoose-Pro-Regular-trial.ttf'); 
+    src: url('/fonts/Cocogoose-Pro-Regular-trial.ttf'); 
 }
