@@ -1,5 +1,12 @@
 <template>
     <SocialsComponent class="absolute top-16 left-2"/>
+    <div class="absolute flex gap-4 text-[1.5rem] right-12 top-2">
+        <a @click="about" class="cursor-pointer underline">About Us</a>
+        <p>|</p>
+        <a @click="outreach" class="cursor-pointer underline">Outreach</a>
+        <p>|</p>
+        <a @click="team" class="cursor-pointer underline">Meet The Team</a>
+    </div>
     <div class="h-[40vh]">
     </div>
     <div class="bg-[#e6e1f4] w-1/2 m-auto rounded-[1rem] text-center text-[3rem] font-[Orange-Milk] text-[#0042c7]">
@@ -25,6 +32,18 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SocialsComponent from "./SocialsComponent.vue";
 
 gsap.registerPlugin(ScrollTrigger);
+
+function team() {
+    gsap.to(window, { duration: 2, scrollTo: { y: "#title-team", offsetY: 300} });
+}
+
+function about() {
+    gsap.to(window, { duration: 2, scrollTo: { y: "#title", offsetY: 300 } });
+}
+
+function outreach() {
+    gsap.to(window, { duration: 2, scrollTo: { y: "#title-outreach", offsetY: 300 } });
+}
 
 onMounted(() => {
     gsap.to("#down", {

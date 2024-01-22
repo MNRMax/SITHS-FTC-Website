@@ -9,13 +9,16 @@
 
     </div>
     <div class="flex justify-center gap-[6rem]">
-        <div id="card1" class="bg-white w-[25%] rounded-lg p-2">
+        <div id="card1" class="bg-white w-[25%] rounded-lg p-2 shadow-[#b2b2b2] shadow-lg">
             <h2 class="bg-[#93b4ff] text-center rounded-lg text-[2.1rem] font-[Cocogoose]">About The Team</h2>
             <p class="text-black text-[1.3rem] font-serif p-6">
                 SITHS Mercury is a FIRST Tech Challenge Robotics Team based in Staten Island, New York. We founded this team in the summer of 2023 and currently have 14 members (mostly juniors) and two coaches.
+                <br>
+                <br>
+                Since the start of our team, we have been working on creating an efficient and supportive working environment to achieve our mission goals. We aim to prepare for the competition, supplement our knowledge with new engineering information, and spread STEM to communities that lack access to technological education.
             </p>
         </div>
-        <div id="card2" class="bg-white w-[25%] rounded-lg p-2">
+        <div id="card2" class="bg-white w-[25%] rounded-lg p-2 shadow-[#b2b2b2] shadow-lg">
             <h2 class="bg-[#93b4ff] text-center rounded-lg text-[2.1rem] font-[Cocogoose]">Our Mission</h2>
             <p class="text-black text-[1.3rem] font-serif p-6">
                 Aligned with FIRST’s mission, Team 23463 aims to address current civic and humanitarian issues via innovative projects that engage and encourage our community to participate in S.T.E.M. In this environment, students are encouraged to develop skills in programming, mechanical and electrical engineering, graphic design, technical writing, website development, life skills, and current events. With this acquired knowledge, our team seeks to excel in the FIRST Tech Challenge and inspire others to pursue S.T.E.M. professions.

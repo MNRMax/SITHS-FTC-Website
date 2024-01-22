@@ -6,3 +6,7 @@
     font-family: 'Cocogoose'; 
     src: url('/fonts/Cocogoose-Pro-Regular-trial.ttf'); 
 }
+@font-face {
+    font-family: 'Lemon'; 
+    src: url('/fonts/LEMONMILK-Regular.otf'); 
+}

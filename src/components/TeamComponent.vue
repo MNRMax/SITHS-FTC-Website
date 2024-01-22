@@ -2,7 +2,7 @@
     <div class="h-[2vh]">
 
     </div>
-    <div id="title"
+    <div id="title-team"
         class="bg-[#e6e1f4] w-1/2 m-auto rounded-[1rem] text-center text-[3rem] font-[Orange-Milk] text-[#0042c7]">
         <h1>Meet The Team</h1>
     </div>
@@ -108,7 +108,7 @@ onMounted(() => {
     })
     gsap.to("#down2", {
         opacity: 0,
-        ScrollTrigger: {
+        scrollTrigger: {
             trigger: "#down2",
             start: "top bottom",
         }
