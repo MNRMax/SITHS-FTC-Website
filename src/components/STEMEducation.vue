@@ -54,7 +54,16 @@ import { onMounted } from "vue";
 gsap.registerPlugin(ScrollTrigger);
 
 onMounted(() => {
-
+    gsap.from("#title-motorists", {
+        y: 200,
+        opacity: 0,
+        scrollTrigger: {
+            trigger: "#title",
+            end: "top center",
+            scrub: true,
+        },
+        yoyo: true,
+    });
 });
 
 </script>
