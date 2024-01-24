@@ -250,7 +250,6 @@ function screwFrontLeft() {
         if (i == 100) {
             clearInterval(interval);
             i = 0;
-            moveOn = true;
         }
     }, 10)
 
@@ -277,7 +276,6 @@ function screwBackLeft() {
         if (i == 100) {
             clearInterval(interval);
             i = 0;
-            moveOn = true;
         }
     }, 10)
 
@@ -304,7 +302,6 @@ function screwFrontRight() {
         if (i == 100) {
             clearInterval(interval);
             i = 0;
-            moveOn = true;
         }
     }, 10)
 
@@ -331,7 +328,6 @@ function screwBackRight() {
         if (i == 100) {
             clearInterval(interval);
             i = 0;
-            moveOn = true;
         }
     }, 10)
 
