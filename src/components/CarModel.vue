@@ -46,14 +46,12 @@ function addStar() {
     return star
 }
 
-addEventListener("resize", (event) => {
+document.addEventListener("resize", (event) => {
     renderer.setPixelRatio(window.devicePixelRatio)
     renderer.setSize(window.innerWidth, window.innerHeight)
     camera.aspect = window.innerWidth / window.innerHeight
     camera.updateProjectionMatrix();
 });
-
-
 
 const loader = new STLLoader();
 
@@ -197,7 +195,7 @@ loader.load('/models/wheel.stl', function (body) {
     console.error(error);
 });
 
-onMounted(() => {
+onMounted(async () => {
     document.getElementById("threejsthing").appendChild(renderer.domElement);
     const canvas = renderer.domElement;
     document.getElementById("threejsthing").addEventListener("mousedown", (event) => {
@@ -207,140 +205,79 @@ onMounted(() => {
         const raycaster = new THREE.Raycaster();
         raycaster.setFromCamera(pointer, camera);
         const intersects = raycaster.intersectObjects(scene.children);
-        switch (intersects[0].object) {
-            case backRightWheel:
-            case backRightScrew:
+        try {
+            if (intersects[0].object === backRightWheel || intersects[0].object === backRightScrew) {
                 if (!rightBackIn) {
                     rightBackIn = true;
                     screwBackRight();
                 }
-                break;
-            case backLeftWheel:
-            case backLeftScrew:
-                if (!leftBackIn) {
+            } else if ((intersects[0].object === backLeftWheel || intersects[0].object === backLeftScrew) && !leftBackIn) {
                     leftBackIn = true;
                     screwBackLeft();
-                }
-                break;
-            case frontRightWheel:
-            case frontRightScrew:
+            } else if (intersects[0].object === frontRightWheel || intersects[0].object === frontRightScrew) {
                 if (!rightFrontIn) {
                     rightFrontIn = true;
                     screwFrontRight();
                 }
-                break;
-            case frontLeftWheel:
-            case frontLeftScrew:
+            } else if (intersects[0].object === frontLeftWheel || intersects[0].object === frontLeftScrew) {
                 if (!leftFrontIn) {
                     leftFrontIn = true;
                     screwFrontLeft();
                 }
-                break;
+            }
+        }
+        catch (error) {
+            console.log(error)
         }
     })
 });
 
 function screwFrontLeft() {
-    let i = 0;
-    let interval;
-
-    interval = setInterval(() => {
-        i++;
+    setIntervalX(() => {
         frontLeftWheel.position.y -= 0.1;
-        if (i == 100) {
-            clearInterval(interval);
-            i = 0;
-        }
-    }, 10)
+    }, 10, 100)
 
     setTimeout(() => {
-        interval = setInterval(() => {
-            i++;
+        setIntervalX(() => {
             frontLeftScrew.position.x += 0.05;
             frontLeftScrew.rotateZ(Math.PI / 100)
-            if (i == 100) {
-                clearInterval(interval);
-                i = 0;
-            }
-        }, 10)
+        }, 10, 100)
     }, 1000)
 }
 
 function screwBackLeft() {
-    let i = 0;
-    let interval;
-
-    interval = setInterval(() => {
-        i++;
+    setIntervalX(() => {
         backLeftWheel.position.y -= 0.1;
-        if (i == 100) {
-            clearInterval(interval);
-            i = 0;
-        }
-    }, 10)
-
+    }, 10, 100)
     setTimeout(() => {
-        interval = setInterval(() => {
-            i++;
+        setIntervalX(() => {
             backLeftScrew.position.x += 0.05;
             backLeftScrew.rotateZ(Math.PI / 100)
-            if (i == 100) {
-                clearInterval(interval);
-                i = 0;
-            }
-        }, 10)
+        }, 10, 100)
     }, 1000)
 }
 
 function screwFrontRight() {
-    let i = 0;
-    let interval;
-
-    interval = setInterval(() => {
-        i++;
+    setIntervalX(() => {
         frontRightWheel.position.y -= 0.1;
-        if (i == 100) {
-            clearInterval(interval);
-            i = 0;
-        }
-    }, 10)
-
+    }, 10, 100)
     setTimeout(() => {
-        interval = setInterval(() => {
-            i++;
+        setIntervalX(() => {
             frontRightScrew.position.x -= 0.05;
             frontRightScrew.rotateZ(Math.PI / 100)
-            if (i == 100) {
-                clearInterval(interval);
-                i = 0;
-            }
-        }, 10)
+        }, 10, 100)
     }, 1000)
 }
 
 function screwBackRight() {
-    let i = 0;
-    let interval;
-
-    interval = setInterval(() => {
-        i++;
+    setIntervalX(() => {
         backRightWheel.position.y -= 0.1;
-        if (i == 100) {
-            clearInterval(interval);
-            i = 0;
-        }
-    }, 10)
-
+    }, 10, 100)
     setTimeout(() => {
-        interval = setInterval(() => {
-            i++;
+        setIntervalX(() => {
             backRightScrew.position.x -= 0.05;
             backRightScrew.rotateZ(Math.PI / 100)
-            if (i == 100) {
-                clearInterval(interval);
-                i = 0;
-            }
-        }, 10)
+        }, 10, 100)
     }, 1000)
 }
 
@@ -350,6 +287,18 @@ function animate() {
     renderer.render(scene, camera);
 }
 animate();
+
+function setIntervalX(callback, delay, repetitions) {
+    var x = 0;
+    var intervalID = window.setInterval(function () {
+
+       callback();
+
+       if (++x === repetitions) {
+           window.clearInterval(intervalID);
+       }
+    }, delay);
+}
 </script>
 
 <template>
