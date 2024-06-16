@@ -2,7 +2,7 @@
     <div id="home" class="w-[100%] h-[100vh] page">
         <HomeComponent/>
     </div>
-    <div id="mission" class="w-[100%] h-[100vh] page">
+    <div id="mission" class="w-[100%] page">
         <MissionComponent/>
     </div>
     <div id="outreach" class="w-[100%] h-[100vh] page">
@@ -39,6 +39,7 @@ onMounted(() => {
     //     ease: "none",
     //     scrollTrigger: {
     //         trigger: element,
+    //         // start: "bottom 80%",
     //         delay: 0.1,
     //         durration: 0.01,
     //         snap: 0.5,

@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="flex" :class="horizontal?'gap-3':'flex-col'">
         <div>
             <a href="https://instagram.com/sithsftc/">
                 <img src="/images/insta.png" alt="Instagram" class="w-[3rem] h-[3rem]" />
@@ -22,3 +22,9 @@
         </div>
     </div>
 </template>
+
+<script setup>
+defineProps({
+    horizontal: Boolean
+})
+</script>
