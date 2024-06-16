@@ -1,13 +1,14 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+
+import navBar from './components/navBar.vue'
 </script>
 
 <template>
-  <h1 class="text-3xl font-bold underline bg-green-50">
-    Hello world!
-  </h1>
+  <div id="page">
+<navBar></navBar>
   <RouterView />
+</div>
 </template>
 
 <style scoped>
