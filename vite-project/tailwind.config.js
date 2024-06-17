@@ -7,6 +7,9 @@ export default {
     extend: {
       fontFamily:  {
         poppins: ['Poppins']
+      },
+      backgroundImage: {
+        'triangles': "url('https://svgur.com/i/17LY.svg')"
       }
     },
   },
