@@ -5,8 +5,8 @@ import navBar from './components/navBar.vue'
 </script>
 
 <template>
+  <navBar></navBar>
   <div id="page">
-<navBar></navBar>
   <RouterView />
 </div>
 </template>
