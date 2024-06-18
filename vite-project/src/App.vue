@@ -5,8 +5,9 @@ import navBar from './components/navBar.vue'
 </script>
 
 <template >
-  <navBar id="nav"></navBar>
-  <div id="page" class=" z-0 overflow-hidden bg-[url('https://svgur.com/i/17LY.svg')] bg-cover ">
+  <navBar id="nav" class="z-1000000000000000000000000000000000000000000000000"></navBar>
+  <div class="w-screen h-16 bg-slate-400 p-[2rem]"></div>
+  <div id="page" class=" -z-10 overflow-hidden  ">
   <RouterView />
 
 </div>
@@ -14,7 +15,6 @@ import navBar from './components/navBar.vue'
 </template>
 
 <style scoped>
-/* #nav{
-  z-index: 100;
-} */
+
+
 </style>
