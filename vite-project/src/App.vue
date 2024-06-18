@@ -6,7 +6,7 @@ import navBar from './components/navBar.vue'
 
 <template >
   <navBar id="nav"></navBar>
-  <div id="page" class=" z-0 overflow-hidden bg-slate-500">
+  <div id="page" class=" z-0 overflow-hidden bg-[url('https://svgur.com/i/17LY.svg')] bg-cover ">
   <RouterView />
 
 </div>
