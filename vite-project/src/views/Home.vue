@@ -16,8 +16,8 @@ onMounted( () => {
 
 <div class="page2 h-full min-h-screen">
   <div class="absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 text-center z-[-9]">
-<span class="text-[black] font-['Poppins',_sans-serif] text-[35px] font-[650] tracking-[1px] text-center bg-fixed bg-center bg-no-repeat bg-cover">Animated Gradient Background</span><br>
-<span class="sub text-[white] font-['Poppins',_sans-serif] text-[20px] font-light tracking-[1px] text-center">By theboywithspec</span>
+<span class="text-[white] font-['Poppins',_sans-serif] text-[35px] font-[650] tracking-[1px] text-center bg-fixed bg-center bg-no-repeat bg-cover">Animated Gradient Background</span><br>
+<span class="sub text-[white] font-['Poppins',_sans-serif] text-[20px] font-light tracking-[1px] text-center">FTC team since 2024</span>
 </div>
 <div class="gradient"></div>
 </div>
@@ -52,7 +52,7 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background: rgba(255,255,255,0.6);
+  background: rgba(0,0,0,0.6  );
   z-index: 0;
   position: absolute;
   top: 50%;
