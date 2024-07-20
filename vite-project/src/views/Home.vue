@@ -1,5 +1,11 @@
 <script setup>
+import navBar from '@/components/navBar.vue';
+import scroller from '@/components/scrollingGallery.vue'
 
+import { onMounted } from 'vue';
+onMounted( () => {
+    window.scrollTo(0,0); 
+})
 </script>
 
 <template>
@@ -7,22 +13,18 @@
 
 
 
-<div class="page1 h-full min-h-screen  flex flex-col">
-  <div class="colorMe -z-30 bg-lime-200">
-<div class="top flex items-center align-middle justify-center h-[60vh] bg-[url('https://64.media.tumblr.com/01b91bd06c8e0214189ed6bc4e915f01/e5b3180b523c2d26-cf/s1280x1920/61fa3f639f38f39161240c6fdd5f71dde3f6fa37.gif')] [clip-path:polygon(0_0,0%_70%,50%_100%,100%_70%,100%_0);] -z-1 bg-cover">
-  <div id="videoText" class="h-[50%] text-center flex justify-center items-center flex-col">
-    <h1 class="font-poppins text-2xl">Welcome To Siths FTC</h1>
-  <img src="https://i.imgur.com/32VCV9v.png" class="h-[75%]">
+
+<div class="page2 h-full min-h-screen">
+  <div class="absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 text-center z-[-9]">
+<span class="text-[black] font-['Poppins',_sans-serif] text-[35px] font-[650] tracking-[1px] text-center bg-fixed bg-center bg-no-repeat bg-cover">Animated Gradient Background</span><br>
+<span class="sub text-[white] font-['Poppins',_sans-serif] text-[20px] font-light tracking-[1px] text-center">By theboywithspec</span>
 </div>
+<div class="gradient"></div>
 </div>
+<scroller></scroller>
+<div class="page2 h-full min-h-screen bg-slate-300">
 
 </div>
-<div class="bottom h-[40vh] bg-lime-200"></div>
-</div>
-<div class="page2 h-full min-h-screen bg-[#ffff00cc]">
-  <p>test</p>
-</div>
-
 
 
 
@@ -30,15 +32,41 @@
 </template>
 
 <style lang="css">
-  /* .top{
-    clip-path: polygon(0 0,   0% 75%, 50% 100%, 100% 75%, 100% 0);
-  } */
+ 
 
-  .page1{
-  z-index: -20;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+body {
+  margin: 0;
+  padding: 0;
+  z-index: 0;
+   background: url('https://cdn.geekwire.com/wp-content/uploads/2017/05/Ballard-HS-2.jpg');
+   background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-.top{
+.gradient {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: rgba(255,255,255,0.6);
+  z-index: 0;
+  position: absolute;
+  top: 50%;
   z-index: -10;
+  left: 50%;
+  min-width: 100vw;
+  transform: translate(-50%, -50%);
+  text-align: center;
+ 
 }
+
+
+
+
+
+
 </style>
