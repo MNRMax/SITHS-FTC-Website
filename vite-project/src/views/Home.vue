@@ -4,8 +4,11 @@ import scroller from '@/components/scrollingGallery.vue'
 
 import { onMounted } from 'vue';
 onMounted( () => {
+  AOS.init();
     window.scrollTo(0,0); 
 })
+
+
 </script>
 
 <template>
@@ -14,16 +17,16 @@ onMounted( () => {
 
 
 
-<div class="page2 h-full min-h-screen">
-  <div class="absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 text-center z-[-9]">
-<span class="text-[white] font-['Poppins',_sans-serif] text-[35px] font-[650] tracking-[1px] text-center bg-fixed bg-center bg-no-repeat bg-cover">Animated Gradient Background</span><br>
+<div class="page2 h-full min-h-screen " >
+  <div class="absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 text-center z-[-9]" >
+<span class="text-[white] font-['Poppins',_sans-serif] text-[35px] font-[650] tracking-[1px] text-center bg-fixed bg-center bg-no-repeat bg-cover">SITHS Mercury</span><br>
 <span class="sub text-[white] font-['Poppins',_sans-serif] text-[20px] font-light tracking-[1px] text-center">FTC team since 2024</span>
 </div>
-<div class="gradient"></div>
+<div class="gradient" ></div>
 </div>
-<scroller></scroller>
-<div class="page2 h-full min-h-screen bg-slate-300">
-
+<scroller ></scroller>
+<div class="page2 h-full min-h-screen bg-slate-300" >
+<p>test</p>
 </div>
 
 
