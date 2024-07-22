@@ -21,9 +21,9 @@ onMounted( () => {
   <div class="absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 text-center z-[-9] flex flex-col justify-center align-center h-[100%] w-[100%]" >
 <span class="text-[white] font-['Poppins',_sans-serif] text-6xl font-[650] tracking-[1px] text-center bg-fixed bg-center bg-no-repeat bg-cover">SITHS Mercury</span>
 <div class="imageHolder h-[45%] flex justify-center items-center">
-<img src="https://cdn.discordapp.com/attachments/1250613112520970312/1264633813276033086/IMG_0153.png?ex=669f3e44&is=669decc4&hm=b17dd718845fe51a2db5cd0f8d909277faac19eedcb6e41c1aa0e14d284c7d22&" class="h-[100%] w-[auto] ">
+<img src="https://cdn.discordapp.com/attachments/1250613112520970312/1264633814257373186/IMG_0158.png?ex=669f3e45&is=669decc5&hm=082e280601786b4d4ecdc5614195cc98f936725590eac8b45301f7a580f05421&" class="h-[100%] w-[auto] ">
 </div>
-<span class="sub text-[white] font-['Poppins',_sans-serif] text-[20px] font-light tracking-[1px] text-center">FTC team since 2024</span>
+<span class="sub text-[white] font-['Poppins',_sans-serif] text-2xl font-light tracking-[1px] text-center">FTC team since 2024</span>
 </div>
 <div class="gradient"></div>
 </div>
