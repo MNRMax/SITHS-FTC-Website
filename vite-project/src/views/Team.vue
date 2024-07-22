@@ -3,15 +3,15 @@
         
     </div>
 <div class=" h-full min-h-screen bg-slate-200">
-<div class="h-[25vh] text-center items-center justify-center bg-slate-100 flex">
-<div class="text-6xl m-6 font-light"><h2>Meet our team.</h2></div>
+<div class="h-[25vh] text-center items-center justify-left bg-slate-100 flex">
+<div class="text-7xl m-7 font-light"><h2>Meet our team.</h2></div>
 </div>
 <div class="h-[75vh] text-center items-center justify-center bg-slate-100 flex overflow-auto w-fit" id="track">
 <img class="mx-[1px] h-[100%] w-auto" v-for="i in images" :src="i">
 </div>
 </div>
 
-<div class=" h-full min-h-screen bg-slate-200" data-aos="fade-up-right"></div>
+<div class=" h-full min-h-screen bg-slate-200"></div>
 
 </template>
 

@@ -17,14 +17,17 @@ onMounted( () => {
 
 
 
-<div class="page2 h-full min-h-screen " >
-  <div class="absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 text-center z-[-9]" >
-<span class="text-[white] font-['Poppins',_sans-serif] text-[35px] font-[650] tracking-[1px] text-center bg-fixed bg-center bg-no-repeat bg-cover">SITHS Mercury</span><br>
+<div class="page1 h-full min-h-screen " >
+  <div class="absolute top-2/4 left-2/4 -translate-x-1/2 -translate-y-1/2 text-center z-[-9] flex flex-col justify-center align-center h-[100%] w-[100%]" >
+<span class="text-[white] font-['Poppins',_sans-serif] text-6xl font-[650] tracking-[1px] text-center bg-fixed bg-center bg-no-repeat bg-cover">SITHS Mercury</span>
+<div class="imageHolder h-[45%] flex justify-center items-center">
+<img src="https://cdn.discordapp.com/attachments/1250613112520970312/1264633813276033086/IMG_0153.png?ex=669f3e44&is=669decc4&hm=b17dd718845fe51a2db5cd0f8d909277faac19eedcb6e41c1aa0e14d284c7d22&" class="h-[100%] w-[auto] ">
+</div>
 <span class="sub text-[white] font-['Poppins',_sans-serif] text-[20px] font-light tracking-[1px] text-center">FTC team since 2024</span>
 </div>
-<div class="gradient" ></div>
+<div class="gradient"></div>
 </div>
-<scroller ></scroller>
+<scroller></scroller>
 <div class="page2 h-full min-h-screen bg-slate-300" >
 <p>test</p>
 </div>
