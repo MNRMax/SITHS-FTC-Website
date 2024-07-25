@@ -1,8 +1,9 @@
 <template>
-     <div class="segment2 h-[10vh] w-screen bg-[rgb(17,24,39)] flex items-center justify-center">
-<p class="text-4xl font-semibold text-white">Sponsored By</p>
+    <div id="holder" class="bg-gradient-to-r from-[#a6bacb] to-[#d6eaff]">
+     <div class="segment2 h-[10vh] w-screen bg-gradient-to-r from-[#a6bacb] to-[#d6eaff] flex items-center justify-center font-poppins">
+<p class="text-4xl font-medium text-white">Sponsored By</p>
      </div>
-   <div class="segment2 h-[30vh] w-[3000px] bg-[rgb(17,24,39)] flex items-center">
+   <div class="segment2 h-[30vh] w-[3000px] bg-gradient-to-r from-[#a6bacb] to-[#d6eaff] flex items-center">
     <div class="scroller flexbox flex items-center justify-around w-[50%]">
     <div class="box bg-slate-50 aspect-square w-[200px] h-[200px] m-2 rounded-md flex items-center justify-center " v-for="sponsor in sponsors">
        <img :src="sponsor.url" class="w-[80%] grayscale">
@@ -16,6 +17,7 @@
     </div>
 </div>
    </div>
+</div>
 </template>
 
 <script setup>
