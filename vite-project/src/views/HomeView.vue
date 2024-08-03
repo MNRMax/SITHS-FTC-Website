@@ -6,8 +6,16 @@
   <div id="shootiforgotaboutthebackgroundunderthenavbar">
     <div id="gap"></div>
     <div id="page1">
-      <div id="linGradient"></div>
-        <div id="contentBox"></div>
+      <div id="p1left">
+        <div id="p1LeftContainer">
+          <h1>Welcome To SITHS FTC</h1>
+          <p class="frontText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+          <p class="frontText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        </div>
+      </div>
+      <div id="p1right">
+        <div id="linGradient"></div>
+      </div>
     </div>
     <div class="custom-shape-divider-top-1722671942">
 </div>
@@ -24,7 +32,15 @@
 </div>
 </template>
 
-<style scoped>
+<style scoped>@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+.sen-font {
+  font-family: "Sen", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
 #shootiforgotaboutthebackgroundunderthenavbar{
   position: absolute;
   overflow: scroll;
@@ -38,9 +54,41 @@
 }
 
 #gap{
-  width: 100%;
+  width: 100%;  
   height: 65px;
   background-color:#2b2345;
+}
+.frontText{
+  font-size: 1rem;
+}
+
+h1{
+  font-size: 2rem;
+}
+#p1LeftContainer{
+  overflow: scroll;
+  background-image: linear-gradient(rgba(0,0,255,0.075),transparent);
+  border-radius: 15px;
+  margin: 50px;
+  color:white;
+  padding: 20px;
+  text-align: left;
+  text-decoration: dotted;
+  width: 75%; 
+  height:75%;
+}
+
+#p1left{
+  text-align: left;
+  text-decoration: dotted;
+  font-family: "Plus Jakarta Sans", sans-serif;
+  /* background-image: linear-gradient(145deg,black,rgb(22, 22, 22)); */
+  background-color: rgb(8,8,25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:40%;
+  height: 100%;
 }
 
 #linGradient{
@@ -54,12 +102,20 @@
 }
 
 #page1{
+  display: flex;
   height: calc(100vh - 65px);
+  position: relative;
+}
+#p1right{
+  height: 100%;
+  width:60%;
   position: relative;
   background-image: url('https://www.frc-9597.com/assets/img/homepage_img.jpg');
   background-size: cover;
   background-position: 50% 50%;
 }
+
+
 
 #page2{
   height: calc(100vh - 65px);
