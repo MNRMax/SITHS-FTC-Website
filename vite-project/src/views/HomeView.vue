@@ -5,8 +5,22 @@
 <template>
   <div id="shootiforgotaboutthebackgroundunderthenavbar">
     <div id="gap"></div>
-      <div id="start"></div>
-      <div id="page1"></div>
+    <div id="page1">
+      <div id="linGradient"></div>
+        <div id="contentBox"></div>
+    </div>
+    <div class="custom-shape-divider-top-1722671942">
+</div>
+    <div id="page2">
+      <div class="custom-shape-divider-top-1722672330">
+    <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <rect x="1200" height="3.6"></rect>
+        <rect height="3.6"></rect>
+        <path d="M0,0V3.6H580.08c11,0,19.92,5.09,19.92,13.2,0-8.14,8.88-13.2,19.92-13.2H1200V0Z" class="shape-fill"></path>
+    </svg>
+</div>
+    </div>
+
 </div>
 </template>
 
@@ -26,11 +40,61 @@
 #gap{
   width: 100%;
   height: 65px;
-  background-color: yellowgreen;
+  background-color:#2b2345;
+}
+
+#linGradient{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* background-color: rgba(50,50,50,0.4); */
+  background-image: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(39, 38, 44, 0.8) 100%);
+  /* background-image: radial-gradient(rgba(64, 64, 64, 0.2),rgba(64, 64, 64, 0.8)) */
 }
 
 #page1{
   height: calc(100vh - 65px);
-  background-image: radial-gradient(skyblue,teal);
+  position: relative;
+  background-image: url('https://www.frc-9597.com/assets/img/homepage_img.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
 }
-</style>
+
+#page2{
+  height: calc(100vh - 65px);
+  position: relative;
+  background-color: rgb(209, 209, 214);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+#contentBox{
+  top: 50;
+  left: 50;
+  width: 75%;
+  height: 75%;
+  background-color: rgba(50,50,50,1);
+  z-index: 100;
+}
+
+.custom-shape-divider-top-1722672330 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1722672330 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 200px;
+}
+
+.custom-shape-divider-top-1722672330 .shape-fill {
+    fill: #0C0A20;
+}
+</style>  

@@ -29,7 +29,7 @@ var prevScrollpos = window.pageYOffset;
   </div>
 <div id="left">
  
-    <img id="nblogo" src="https://media.discordapp.net/attachments/1250613112520970312/1264633814257373186/IMG_0158.png?ex=66ae6785&is=66ad1605&hm=38aa380a85e66b7a851a0034dbc37f26bc615e50032d7116e60d6edafc132d1a&=&format=webp&quality=lossless&width=652&height=597">
+    <img id="nblogo" src="https://i.imgur.com/bkc8Fmw.png">
     <p id="sithssaturn">SITHS Saturn</p>
 </div>
 <div id="right"></div>
@@ -173,7 +173,7 @@ a{
     position: absolute;
     display: block;
     width: 100%;
-    background-color: #333;
+    background-color: #7273a5bf;
     height: 0px;
     transition: all 0.3s ease-in;
     overflow-y: hidden;
