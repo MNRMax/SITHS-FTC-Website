@@ -2,16 +2,16 @@
 
 var prevScrollpos = window.pageYOffset;
       window.onscroll = function() {
-
+        console.log(window.pageYOffset)
       var currentScrollpos = window.pageYOffset;
-      if(prevScrollpos > currentScrollpos) {
-            document.getElementById("navbar").style.top = "0";
-      } else {
+      if(prevScrollpos < currentScrollpos && window.pageYOffset > 65)  {
             document.getElementById("navbar").style.top = "-100px";
+      } else {
+            document.getElementById("navbar").style.top = "0px";
       }
 
       prevScrollpos = currentScrollpos;
-
+      
       } 
 </script>
 
@@ -34,12 +34,13 @@ var prevScrollpos = window.pageYOffset;
 </div>
 <div id="right"></div>
   <div class="nav-links">
-    <a href="#">Home</a>
-    <a href="#">Team</a>
-    <a href="#">Social</a>
-    <a href="#">Options</a>
+    <RouterLink to="/">Home</RouterLink>
+    <RouterLink to="/team">Team</RouterLink>
+    <RouterLink to="/social">Social</RouterLink>
+    <RouterLink to="/options">Options</RouterLink>
   </div>    
 </div>
+<div id="push"></div>
 </template>
 
 <style scoped>
@@ -79,7 +80,8 @@ font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans 
   display: inline;
 }
 #push{
-    height:50px
+  /* background-color: aqua; */
+    height:55px
 }
 
 .nav > .nav-header > .nav-title {
