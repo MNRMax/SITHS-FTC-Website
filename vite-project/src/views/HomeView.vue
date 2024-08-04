@@ -39,7 +39,8 @@ import scrollBar from '@/components/scrollBar.vue'
 </div>
 </template>
 
-<style scoped>@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+<style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 .sen-font {
   font-family: "Sen", sans-serif;
@@ -141,10 +142,10 @@ h1{
 
 
 #page2{
-  height: calc(40vh);
+  height: calc(45vh);
   position: relative;
   display: flex;
-  background-color: rgb(209, 209, 214);
+  background-image: linear-gradient(90deg,#7072a2, #d7d7fe);
   background-size: cover;
   background-position: 50% 50%;
 }
