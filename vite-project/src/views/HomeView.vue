@@ -1,6 +1,7 @@
 <script setup>
 import video from '@/assets/media/vid.mp4'
 import poster from '@/assets/media/poster.jpg'
+import scrollBar from '@/components/scrollBar.vue'
 </script>
 
 <template>
@@ -29,8 +30,10 @@ import poster from '@/assets/media/poster.jpg'
         <rect x="1200" height="3.6"></rect>
         <rect height="3.6"></rect>
         <path d="M0,0V3.6H580.08c11,0,19.92,5.09,19.92,13.2,0-8.14,8.88-13.2,19.92-13.2H1200V0Z" class="shape-fill"></path>
+
     </svg>
 </div>
+<scrollBar></scrollBar>
     </div>
 
 </div>
@@ -140,6 +143,7 @@ h1{
 #page2{
   height: calc(40vh);
   position: relative;
+  display: flex;
   background-color: rgb(209, 209, 214);
   background-size: cover;
   background-position: 50% 50%;
@@ -183,8 +187,8 @@ h1{
 }
 @media (max-aspect-ratio: 16/9) {
     #videoBG { 
-      width:100%;
-      height: auto;
+      width:auto;
+      height: 100%;
     }
 }
 @media (max-width: 767px) {
