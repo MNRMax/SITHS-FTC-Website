@@ -1,5 +1,6 @@
 <script setup>
-
+import video from '@/assets/media/vid.mp4'
+import poster from '@/assets/media/poster.jpg'
 </script>
 
 <template>
@@ -14,6 +15,9 @@
         </div>
       </div>
       <div id="p1right">
+        <video id="videoBG" :poster="poster" autoplay muted loop>
+    <source :src="video" type="video/mp4">
+</video>
         <div id="linGradient"></div>
       </div>
     </div>
@@ -41,6 +45,17 @@
   font-style: normal;
 }
 
+#videoBG{
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  top:0;
+  z-index: -1;
+  height: 100%;
+  width: auto;
+}
+
+
 #shootiforgotaboutthebackgroundunderthenavbar{
   position: absolute;
   overflow: scroll;
@@ -67,6 +82,7 @@ h1{
 }
 #p1LeftContainer{
   overflow: scroll;
+  line-height: 1.1;
   background-image: linear-gradient(rgba(0,0,255,0.075),transparent);
   border-radius: 15px;
   margin: 50px;
@@ -102,6 +118,7 @@ h1{
 }
 
 #page1{
+  overflow-x: hidden;
   display: flex;
   height: calc(100vh - 65px);
   position: relative;
@@ -110,15 +127,18 @@ h1{
   height: 100%;
   width:60%;
   position: relative;
-  background-image: url('https://www.frc-9597.com/assets/img/homepage_img.jpg');
+  display: flex;
+  justify-content: space-between;
+  /* background-image: url('https://www.frc-9597.com/assets/img/homepage_img.jpg'); */
   background-size: cover;
   background-position: 50% 50%;
 }
 
 
 
+
 #page2{
-  height: calc(100vh - 65px);
+  height: calc(40vh);
   position: relative;
   background-color: rgb(209, 209, 214);
   background-size: cover;
@@ -152,5 +172,29 @@ h1{
 
 .custom-shape-divider-top-1722672330 .shape-fill {
     fill: #0C0A20;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    #videoBG {
+      
+        width:auto;
+        height: 100%;
+    }
+}
+@media (max-aspect-ratio: 16/9) {
+    #videoBG { 
+      width:100%;
+      height: auto;
+    }
+}
+@media (max-width: 767px) {
+    #videoBG {
+        display: none;
+    }
+    body {
+      overflow: hidden;
+        background: url('poster.jpg');
+        background-size: cover;
+    }
 }
 </style>  

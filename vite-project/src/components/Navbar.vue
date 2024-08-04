@@ -37,7 +37,7 @@ var prevScrollpos = window.pageYOffset;
     <RouterLink to="/">Home</RouterLink>
     <RouterLink to="/team">Team</RouterLink>
     <RouterLink to="/social">Social</RouterLink>
-    <RouterLink to="/options">Options</RouterLink>
+    <RouterLink id="op" to="/options">Options</RouterLink>
   </div>    
 </div>
 <div id="push"></div>
@@ -95,6 +95,12 @@ font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans 
   display: none;
 }
 
+
+a{
+  min-width: 100px;
+   width:10%;
+  text-align: center; 
+}
 .nav-btn{
     height:100%;
 }
