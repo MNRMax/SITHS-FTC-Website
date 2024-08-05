@@ -1,6 +1,5 @@
 <template>
 
-<scrollBar></scrollBar>
 </template>
 
 <style>

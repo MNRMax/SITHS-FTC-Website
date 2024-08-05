@@ -199,6 +199,7 @@ a{
   }
 }
 #navbar {
+  font-weight: 600;
       background-image: linear-gradient(#161130,#2b2345);
       position: fixed;
       display: flex;

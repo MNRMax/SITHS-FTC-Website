@@ -9,10 +9,10 @@ import scrollBar from '@/components/scrollBar.vue'
     <div id="gap"></div>
     <div id="page1">
       <div id="p1left">
-        <div id="p1LeftContainer">
-          <h1>Welcome To SITHS FTC</h1>
-          <p class="frontText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-          <p class="frontText">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <div id="p1LeftContainer" data-aos="fade-right" data-aos-duration="750">
+          <h1 data-aos="fade-right" >Welcome To SITHS FTC</h1>
+          <p class="frontText" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+          <p class="frontText" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
         </div>
       </div>
       <div id="p1right">
@@ -35,7 +35,9 @@ import scrollBar from '@/components/scrollBar.vue'
 </div>
 <scrollBar></scrollBar>
     </div>
-
+<div id="page3">
+<p>test</p>
+</div>
 </div>
 </template>
 
@@ -47,6 +49,13 @@ import scrollBar from '@/components/scrollBar.vue'
   font-optical-sizing: auto;
   font-weight: 600;
   font-style: normal;
+}
+
+#page3{
+  border-top: white 2px solid;
+  height: 100vh;
+  width: 100%;
+  background-color: #272729;
 }
 
 #videoBG{
@@ -68,7 +77,7 @@ import scrollBar from '@/components/scrollBar.vue'
     left: 0;
     top: calc(0PX);
     /* background-color: wheat; */
-    background-image: url('https://media.discordapp.net/attachments/1026191356646932591/1269096847285420082/image.png?ex=66aed20b&is=66ad808b&hm=cf7be8ee22f6b649fa9bd78812a62ed19f07c38907a5921075a47d8a3f7f0c6f&=&format=webp&quality=lossless&width=621&height=662');
+    /* background-image: url('https://media.discordapp.net/attachments/1026191356646932591/1269096847285420082/image.png?ex=66aed20b&is=66ad808b&hm=cf7be8ee22f6b649fa9bd78812a62ed19f07c38907a5921075a47d8a3f7f0c6f&=&format=webp&quality=lossless&width=621&height=662'); */
     z-index: -10;
 }
 
@@ -142,10 +151,12 @@ h1{
 
 
 #page2{
-  height: calc(45vh);
+  /* transform: rotate(2deg); */
+  height: calc(47.5vh);
+  overflow: hidden;
   position: relative;
   display: flex;
-  background-image: linear-gradient(90deg,#7072a2, #d7d7fe);
+  background-image: linear-gradient(180deg, #08082a, #08082a);
   background-size: cover;
   background-position: 50% 50%;
 }
@@ -176,7 +187,7 @@ h1{
 }
 
 .custom-shape-divider-top-1722672330 .shape-fill {
-    fill: #0C0A20;
+    fill: white;
 }
 
 @media (min-aspect-ratio: 16/9) {
@@ -192,9 +203,29 @@ h1{
       height: 100%;
     }
 }
-@media (max-width: 767px) {
+@media (max-width: 800px) {
     #videoBG {
         display: none;
+        background-image: url('https://as1.ftcdn.net/v2/jpg/05/61/04/96/1000_F_561049685_ytOTAsMNGnv2XLyOVd8icNCYOXMoEdDA.jpg');
+    }
+    #p1right{
+      width: 0%;
+    }
+    #linGradient{
+      background-image: url('https://as1.ftcdn.net/v2/jpg/05/61/04/96/1000_F_561049685_ytOTAsMNGnv2XLyOVd8icNCYOXMoEdDA.jpg');
+    }
+    #p1LeftContainer{
+      text-align: center;
+      margin: 0px;
+      background-image: linear-gradient(#08082aE6,#08082aE6);
+    }
+    /* .frontText */
+    #p1left{
+      text-align: center;
+      background-position: center;
+      background-size: cover;
+      width: 100%;
+      background-image: url('https://as1.ftcdn.net/v2/jpg/05/61/04/96/1000_F_561049685_ytOTAsMNGnv2XLyOVd8icNCYOXMoEdDA.jpg');
     }
     body {
       overflow: hidden;
