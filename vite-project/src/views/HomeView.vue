@@ -36,7 +36,7 @@ import scrollBar from '@/components/scrollBar.vue'
 <scrollBar></scrollBar>
     </div>
 <div id="page3">
-<p>test</p>
+<canvas id="scene"></canvas>
 </div>
 </div>
 </template>
@@ -51,11 +51,17 @@ import scrollBar from '@/components/scrollBar.vue'
   font-style: normal;
 }
 
+#scene{
+  background-color: antiquewhite;
+  height: 100%;
+  width: 100%;
+}
 #page3{
   border-top: white 2px solid;
+  color: white;
   height: 100vh;
   width: 100%;
-  background-color: #272729;
+  background-color: #1e1f23;
 }
 
 #videoBG{
@@ -112,7 +118,7 @@ h1{
   text-decoration: dotted;
   font-family: "Plus Jakarta Sans", sans-serif;
   /* background-image: linear-gradient(145deg,black,rgb(22, 22, 22)); */
-  background-color: rgb(8,8,25);
+  background-color: #1e1f23;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -156,7 +162,7 @@ h1{
   overflow: hidden;
   position: relative;
   display: flex;
-  background-image: linear-gradient(180deg, #08082a, #08082a);
+  background-color: #cdd0db;
   background-size: cover;
   background-position: 50% 50%;
 }

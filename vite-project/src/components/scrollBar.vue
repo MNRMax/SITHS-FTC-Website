@@ -82,7 +82,7 @@ console.log(info[2].image)
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
 
 #subText{
-    color: white;
+   
      font-family: "Plus Jakarta Sans", sans-serif ;
      font-weight: 200;
      text-align: center;
@@ -90,9 +90,9 @@ console.log(info[2].image)
 }
 #sponTitle{
     text-decoration: underline;
-    color: white;
+    /* color: rgb(217, 217, 217); */
     text-align: center;
-    font-weight: 550;
+    font-weight: 400;
     margin: 30px;
     margin-top: 0px;
     margin-bottom: 0px;
@@ -107,7 +107,7 @@ body{
 main{
     width: 100%;
     margin: auto;
-}
+}   
 .slider{
     /* transform: rotate(4deg); */
     width: 100%;

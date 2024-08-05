@@ -200,7 +200,7 @@ a{
 }
 #navbar {
   font-weight: 600;
-      background-image: linear-gradient(#161130,#2b2345);
+      background-image: linear-gradient(#161130 0%,#333c61 50%);
       position: fixed;
       display: flex;
       flex-direction: right;

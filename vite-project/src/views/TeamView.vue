@@ -1,5 +1,5 @@
 <template>
-
+<trest></trest>
 </template>
 
 <style>
@@ -10,4 +10,5 @@
 import scrollBar from '@/components/scrollBar.vue'
 import video from '@/assets/media/vid.mp4'
 import poster from '@/assets/media/poster.jpg'
+import trest from '@/components/trest.vue';
 </script>
