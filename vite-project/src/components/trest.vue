@@ -1,5 +1,5 @@
 <template>
-<div id="progress-container">
+    <div id="progress-container" class="alert">
       <div id="progress">Engaging Hyperdrive...</div>
     </div>
 </template>
@@ -8,6 +8,13 @@
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
+import { onMounted } from 'vue';
+onMounted(() => {
+  const matches = document.body.querySelectorAll("#page3");
+matches.forEach(match =>{
+  console.log(match.children)
+})
+})
 
 const renderer = new THREE.WebGLRenderer({ antialias: true });
 renderer.outputColorSpace = THREE.SRGBColorSpace;
@@ -54,8 +61,8 @@ spotLight.castShadow = true;
 spotLight.shadow.bias = -0.0001;
 scene.add(spotLight);
 
-const loader = new GLTFLoader().setPath('public/adamHead/');
-loader.load('adamHead.gltf', (gltf) => {
+const loader = new GLTFLoader()
+loader.load('./marill/scene.gltf', (gltf) => {
   console.log('loading model');
   const mesh = gltf.scene;
 
@@ -91,49 +98,12 @@ function animate() {
 animate();
 </script>
 
+
+
 <style lang="css" scoped>
-@font-face {
-  font-family: 'SF Distant Galaxy';
-  src: local('SF Distant Galaxy'), url(fonts/SF\ Distant\ Galaxy.ttf), format('ttf');
-}
-
-body {
-
-  margin: 0;
-  font-family: 'SF Distant Galaxy';
-}
-
-#heading {
-  position: fixed;
-  width: 100%;
-  padding: 32px;
-}
-
-.border {
-  background: linear-gradient(90deg, gray, 90%, black);
-  height: 2px;
-  width: 80vw;
-  margin-top: 4px;
-}
-
-h1 {
-  color: rgb(215, 215, 215);
-  font-size: 4em;
-  margin: 0px;
-  font-weight: 100;
-}
-
-#progress-container {
-  position: fixed;
-  width: 100%;
+#scene{
+  background-color: aqua;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-#progress {
-  font-size: 3em;
-  color: white;
+  width: 100%;;  
 }
 </style>

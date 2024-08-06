@@ -75,7 +75,7 @@ let info = [{
     padding: "",
 },
 ]
-console.log(info[2].image)
+// console.log(info[2].image)
 </script>
 
 <style scoped>

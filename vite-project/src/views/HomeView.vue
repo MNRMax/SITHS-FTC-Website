@@ -2,6 +2,7 @@
 import video from '@/assets/media/vid.mp4'
 import poster from '@/assets/media/poster.jpg'
 import scrollBar from '@/components/scrollBar.vue'
+import trest from '@/components/trest.vue';
 </script>
 
 <template>
@@ -36,7 +37,7 @@ import scrollBar from '@/components/scrollBar.vue'
 <scrollBar></scrollBar>
     </div>
 <div id="page3">
-<canvas id="scene"></canvas>
+<trest></trest>
 </div>
 </div>
 </template>
@@ -51,11 +52,7 @@ import scrollBar from '@/components/scrollBar.vue'
   font-style: normal;
 }
 
-#scene{
-  background-color: antiquewhite;
-  height: 100%;
-  width: 100%;
-}
+
 #page3{
   border-top: white 2px solid;
   color: white;
