@@ -1,7 +1,7 @@
 import './assets/main.css'
 
 import { createApp } from 'vue'
-import Tres from '@/tresjs/core'
+import Tres from '@tresjs/core'
 import { createPinia } from 'pinia'
 
 import App from './App.vue'
