@@ -1,3 +1,9 @@
+<template>
+<div id="progress-container">
+      <div id="progress">Engaging Hyperdrive...</div>
+    </div>
+</template>
+
 <script setup>
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
@@ -48,8 +54,8 @@ spotLight.castShadow = true;
 spotLight.shadow.bias = -0.0001;
 scene.add(spotLight);
 
-const loader = new GLTFLoader().setPath('./asseeqwwets/media/falcon/');
-loader.load('scene.gtlf', (gltf) => {
+const loader = new GLTFLoader().setPath('public/adamHead/');
+loader.load('adamHead.gltf', (gltf) => {
   console.log('loading model');
   const mesh = gltf.scene;
 
@@ -85,24 +91,14 @@ function animate() {
 animate();
 </script>
 
-<template>
- <div id="heading">
-      <h1>THE MILLENNIUM FALCON</h1>
-      <div class="border"></div>
-    </div>
-    <div id="progress-container">
-      <div id="progress">Engaging Hyperdrive...</div>
-    </div>
-</template>
-
-<style scoped>
+<style lang="css" scoped>
 @font-face {
   font-family: 'SF Distant Galaxy';
   src: local('SF Distant Galaxy'), url(fonts/SF\ Distant\ Galaxy.ttf), format('ttf');
 }
 
 body {
-  background-color: black;
+
   margin: 0;
   font-family: 'SF Distant Galaxy';
 }
