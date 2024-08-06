@@ -10,23 +10,20 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { onMounted } from 'vue';
 onMounted(() => {
-  const matches = document.body.querySelectorAll("#page3");
-matches.forEach(match =>{
-  console.log(match.children)
-})
-})
+ let page = document.getElementById("page3")
+console.log(page)
 
-const renderer = new THREE.WebGLRenderer({ antialias: true });
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true});
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 
 renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.setClearColor(0x000000);
+renderer.setClearColor( 0x00ff00, 0 );
 renderer.setPixelRatio(window.devicePixelRatio);
 
 renderer.shadowMap.enabled = true;
 renderer.shadowMap.type = THREE.PCFSoftShadowMap;
 
-document.body.appendChild(renderer.domElement);
+page.appendChild(renderer.domElement);
 
 const scene = new THREE.Scene();
 
@@ -39,8 +36,9 @@ controls.enablePan = false;
 controls.minDistance = 5;
 controls.maxDistance = 20;
 controls.minPolarAngle = 0.5;
+controls.autoRotateSpeed = 2.0
 controls.maxPolarAngle = 1.5;
-controls.autoRotate = false;
+controls.autoRotate = true;
 controls.target = new THREE.Vector3(0, 1, 0);
 controls.update();
 
@@ -50,26 +48,23 @@ const groundMaterial = new THREE.MeshStandardMaterial({
   color: 0x555555,
   side: THREE.DoubleSide
 });
-const groundMesh = new THREE.Mesh(groundGeometry, groundMaterial);
-groundMesh.castShadow = false;
-groundMesh.receiveShadow = true;
-scene.add(groundMesh);
+// const groundMesh = new THREE.Mesh(groundGeometry, groundMaterial);
+// groundMesh.castShadow = false;
+// groundMesh.receiveShadow = true;
+// scene.add(groundMesh);
 
-const spotLight = new THREE.SpotLight(0xffffff, 3000, 100, 0.22, 1);
-spotLight.position.set(0, 25, 0);
-spotLight.castShadow = true;
-spotLight.shadow.bias = -0.0001;
-scene.add(spotLight);
+const directionalLight = new THREE.DirectionalLight( 0xffffff, 1);
+scene.add( directionalLight );
 
 const loader = new GLTFLoader()
-loader.load('./marill/scene.gltf', (gltf) => {
+loader.load('./adamHead/adamHead.gltf', (gltf) => {
   console.log('loading model');
   const mesh = gltf.scene;
 
   mesh.traverse((child) => {
     if (child.isMesh) {
-      child.castShadow = true;
-      child.receiveShadow = true;
+      child.castShadow = false;
+      child.receiveShadow = false;
     }
   });
 
@@ -96,6 +91,7 @@ function animate() {
 }
 
 animate();
+})
 </script>
 
 

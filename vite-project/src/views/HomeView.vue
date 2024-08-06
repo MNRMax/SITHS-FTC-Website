@@ -37,6 +37,8 @@ import trest from '@/components/trest.vue';
 <scrollBar></scrollBar>
     </div>
 <div id="page3">
+  <div id="p3left"></div>
+  <div id="p3right"></div>
 <trest></trest>
 </div>
 </div>
@@ -58,7 +60,7 @@ import trest from '@/components/trest.vue';
   color: white;
   height: 100vh;
   width: 100%;
-  background-color: #1e1f23;
+  background-color: skyblue;
 }
 
 #videoBG{
