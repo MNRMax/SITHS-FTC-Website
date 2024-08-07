@@ -54,6 +54,17 @@ import trest from '@/components/trest.vue';
   font-style: normal;
 }
 
+#p3left{
+  height:100%;
+  width:40%;
+  background-color: rgba(0,255,0,0.3);
+}
+#p3right{
+height: 100%;
+width: 60%;
+background-color: rgba(0,0,255,0.3);
+}
+
 
 #page3{
   border-top: white 2px solid;
