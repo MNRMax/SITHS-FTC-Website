@@ -1,5 +1,5 @@
 <template>
-<trest></trest>
+<p>test</p>
 </template>
 
 <style>

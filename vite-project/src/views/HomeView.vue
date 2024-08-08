@@ -3,10 +3,18 @@ import video from '@/assets/media/vid.mp4'
 import poster from '@/assets/media/poster.jpg'
 import scrollBar from '@/components/scrollBar.vue'
 import trest from '@/components/trest.vue';
+import FAQ from '@/components/FAQ.vue'
+
+let linkInfo = [{
+  icon: 'https://cdn4.iconfinder.com/data/icons/logos-brands-7/512/google_logo-google_icongoogle-512.png',
+  title: 'Google',
+  desc: 'Search your own stuff.',
+},
+]
 </script>
 
 <template>
-  <div id="shootiforgotaboutthebackgroundunderthenavbar">
+  <div id="page1container">
     <div id="gap"></div>
     <div id="page1">
       <div id="p1left">
@@ -47,6 +55,17 @@ import trest from '@/components/trest.vue';
   </div>
 <trest></trest>
 </div>
+<div id="page4">
+  <div id="p4right">
+    <FAQ></FAQ>
+  </div>
+  <div id="p4left">
+    <h1 id="relLink">Relevant Links</h1>
+    <div v-for="i in linkInfo" class="linkBox">
+<p>{{ i.title }}</p>
+    </div>
+  </div>
+</div>
 </div>
 </template>
 
@@ -60,6 +79,15 @@ import trest from '@/components/trest.vue';
   font-style: normal;
 }
 
+.linkBox{
+  background-color: antiquewhite;
+  width: 50%;
+  height: 20%;
+}
+
+#relLinks{
+  width: 100%;
+}
 #p3left{
   height:100%;
   width:47.5%;
@@ -77,6 +105,31 @@ background-color: rgba(0,0,255,0.1);
 }
 
 
+#p4left{
+  font-family: "Plus Jakarta Sans", sans-serif ;
+text-align: center;
+  overflow: auto;
+  height:100%;
+  width:47.5%;
+  background-color: rgba(0, 255, 81, 0.5);
+  /* background-image: url('https://i.redd.it/q0ci022kteb61.jpg'); */
+  background-position: cover;
+  display: flex;
+  flex-direction: column;
+align-items: center;
+}
+#p4right{
+height: 100%;
+/* display: flex;
+justify-content: center;
+align-items: center; */
+overflow: auto;
+width: 75%;
+background-color: rgba(0,0,255,0.1);
+}
+
+
+
 #page3{
   border-top: white 2px solid;
   color: white;
@@ -85,6 +138,16 @@ background-color: rgba(0,0,255,0.1);
   position: relative;
   display: flex;
   background-color: rgba(0,0,0,1);
+}
+#page4{
+  border-top: white 2px solid;
+  color: white;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: rgb(242, 124, 124);
 }
 
 #videoBG{
@@ -98,11 +161,11 @@ background-color: rgba(0,0,255,0.1);
 }
 
 
-#shootiforgotaboutthebackgroundunderthenavbar{
+#page1container{
   position: absolute;
   overflow: scroll;
     width: 100%;
-    height: calc(300vh);
+    height: calc(347.5vh - 65px);
     left: 0;
     top: calc(0PX);
     /* background-color: wheat; */
