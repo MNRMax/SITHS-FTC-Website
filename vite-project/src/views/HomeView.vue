@@ -11,9 +11,9 @@ import trest from '@/components/trest.vue';
     <div id="page1">
       <div id="p1left">
         <div id="p1LeftContainer" data-aos="fade-right" data-aos-duration="750">
-          <h1 data-aos="fade-right" >Welcome To SITHS FTC</h1>
-          <p class="frontText" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
-          <p class="frontText" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+          <h1 data-aos="fade-right" >SITHS Saturn 26195</h1>
+          <p class="frontText" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+          <p class="frontText" >Magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
         </div>
       </div>
       <div id="p1right">
@@ -38,7 +38,13 @@ import trest from '@/components/trest.vue';
     </div>
 <div id="page3">
   <div id="p3left"></div>
-  <div id="p3right"></div>
+  <div id="p3right">
+    <div id="p3RightContainer" data-aos="fade-left" data-aos-duration="1250">
+          <h1 data-aos="fade-right" id="p3title" >Our Mission</h1>
+          <p class="p3text" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+          <p class="p3text" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        </div>
+  </div>
 <trest></trest>
 </div>
 </div>
@@ -56,13 +62,18 @@ import trest from '@/components/trest.vue';
 
 #p3left{
   height:100%;
-  width:40%;
-  background-color: rgba(0,255,0,0.3);
+  width:47.5%;
+  background-color: rgba(255, 255, 255, .5);
+  background-image: url('https://i.redd.it/q0ci022kteb61.jpg');
+  background-position: cover;
 }
 #p3right{
 height: 100%;
-width: 60%;
-background-color: rgba(0,0,255,0.3);
+display: flex;
+justify-content: center;
+align-items: center;
+width: 52.5%;
+background-color: rgba(0,0,255,0.1);
 }
 
 
@@ -71,7 +82,9 @@ background-color: rgba(0,0,255,0.3);
   color: white;
   height: 100vh;
   width: 100%;
-  background-color: skyblue;
+  position: relative;
+  display: flex;
+  background-color: rgba(0,0,0,1);
 }
 
 #videoBG{
@@ -103,14 +116,40 @@ background-color: rgba(0,0,255,0.3);
   background-color:#2b2345;
 }
 .frontText{
-  font-size: 1rem;
+  font-size: 1.05rem;
+}
+
+.p3text{
+  font-size: 1.05rem;
+}
+
+#p3title{
+  font-size: 2.75rem
 }
 
 h1{
-  font-size: 2rem;
+  font-size: 2.75rem;
+}
+#p3RightContainer{
+  /* -ms-overflow-style: none;   IE and Edge 
+  scrollbar-width: none;  Firefox */
+  overflow: auto;
+  line-height: 1.1;
+  background-image: linear-gradient(rgba(255,0,255,0.075),transparent);
+  border-radius: 15px;
+  margin: 50px;
+  color:white;
+  padding: 20px;
+  text-align: left;
+  text-decoration: dotted;
+  width: 70%; 
+  height:75%;
+  font-family: "Plus Jakarta Sans", sans-serif;
 }
 #p1LeftContainer{
-  overflow: scroll;
+  /* -ms-overflow-style: none;   IE and Edge 
+  scrollbar-width: none;  Firefox */
+  overflow: auto;
   line-height: 1.1;
   background-image: linear-gradient(rgba(0,0,255,0.075),transparent);
   border-radius: 15px;

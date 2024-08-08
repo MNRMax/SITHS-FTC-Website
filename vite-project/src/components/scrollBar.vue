@@ -12,7 +12,7 @@
             <div class="list">
                 <a v-for="i in 7" :href="info[i - 1].link">
                 <div class="item"  :style="`--position: ${i}`">
-                    <img :src="info[i - 1].image" alt="" :class="`sImage`" :style="`padding:${info[i - 1].padding}px;`" >
+                    <img :src="info[i - 1].image" alt="" :class="`sImage`" :style="`padding:${info[i-1].padding}px;`" >
                 </div>
             </a>
                  </div>
@@ -40,7 +40,7 @@ let info = [{
 {
     image: `https://3.files.edl.io/fd75/20/04/09/191319-2af8eea0-9bd2-4795-8791-640f550a5c8f.png`,
     link: `https://www.siths.org/`,
-    padding: 30,
+    padding: 20,
 },
 {
     // image: `https://i.imgur.com/T1bGDmp.png`,
@@ -57,22 +57,22 @@ let info = [{
 {
     image: `https://i.pinimg.com/originals/52/af/e4/52afe4e9fbd02b957d741c9be9fb1ceb.png`,
     link: `https://shakeshack.com`,
-    padding: "",
+    padding: 0,
 },
 {
     image: `https://i.pinimg.com/originals/52/af/e4/52afe4e9fbd02b957d741c9be9fb1ceb.png`,
     link: `https://shakeshack.com`,
-    padding: "",
+    padding: 0,
 },
 {
     image: `https://i.pinimg.com/originals/52/af/e4/52afe4e9fbd02b957d741c9be9fb1ceb.png`,
     link: `https://shakeshack.com`,
-    padding: "",
+    padding: 0,
 },
 {
     image: `https://i.pinimg.com/originals/52/af/e4/52afe4e9fbd02b957d741c9be9fb1ceb.png`,
     link: `https://shakeshack.com`,
-    padding: "",
+    padding: 0,
 },
 ]
 // console.log(info[2].image)
@@ -96,7 +96,7 @@ let info = [{
     margin: 30px;
     margin-top: 0px;
     margin-bottom: 0px;
-    font-size: 3rem;
+    font-size: 2.75rem;
     font-family: "Plus Jakarta Sans", sans-serif ;
 }
 
@@ -166,7 +166,7 @@ main{
 .slider .item:hover{
     transition: .25s;
     filter: grayscale(0);
-    transform: scale(1.1);
+    transform: scale(1.05   );
 }
 
 .item:hover .sImage{
@@ -185,7 +185,8 @@ main{
 }   
 .sImage{
    height: auto;
-   width: 100%;
+   width: 85%;
+   /* margin: 10px; */
 }
 
 </style>

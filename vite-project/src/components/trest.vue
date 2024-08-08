@@ -1,7 +1,5 @@
 <template>
-    <div id="progress-container" class="alert">
-      <div id="progress">Engaging Hyperdrive...</div>
-    </div>
+
 </template>
 
 <script setup>
@@ -10,15 +8,18 @@ import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import { onMounted } from 'vue';
 import { ref } from 'vue';
+let what = 0
+
 onMounted(() => {
  let page = document.getElementById("p3left")
-console.log(page)
+ let potato = ref(document.getElementById("p3left").offsetWidth)
+
 
 const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true});
 renderer.outputColorSpace = THREE.SRGBColorSpace;
 
-renderer.setSize((window.innerWidth * (4/10)), window.innerHeight);
-renderer.setClearColor( 0x00ff00, 0 );
+renderer.setSize(((document.getElementById("p3left").getBoundingClientRect().width) - what), window.innerHeight);
+renderer.setClearColor( 0x000000, 0 );
 renderer.setPixelRatio(window.devicePixelRatio);
 
 renderer.shadowMap.enabled = true;
@@ -28,14 +29,14 @@ page.appendChild(renderer.domElement);
 
 const scene = new THREE.Scene();
 
-const camera = new THREE.PerspectiveCamera(85, (window.innerWidth * (4/10)) / window.innerHeight, 1, 1000);
+const camera = new THREE.PerspectiveCamera(70, (document.getElementById("p3left").getBoundingClientRect().width) / window.innerHeight, 1, 1000);
 camera.position.set(0, 0, 0)
 
 const controls = new OrbitControls(camera, renderer.domElement);
-controls.enableDamping = true;
-controls.enablePan = false;
+// controls.enableDamping = true;
+// controls.enablePan = false;
 controls.minDistance = 5;
-controls.maxDistance = 5;
+controls.maxDistance = 25;
 controls.minPolarAngle = 0.5;
 controls.autoRotateSpeed = .4
 controls.maxPolarAngle = 1.5;
@@ -52,13 +53,24 @@ groundGeometry.rotateX(-Math.PI / 2);
 // scene.add(groundMesh);
 
 const directionalLight = new THREE.DirectionalLight( 0xffffff, 1);
-scene.add( directionalLight );
 
-const light = new THREE.PointLight( 0xff0000, 1, 100 );
-light.position.set( 50, 50, 50 );
-scene.add( light );
+const alight = new THREE.AmbientLight( 0xffffff, 1 ); 
+
+
+
+
+const light = new THREE.PointLight( 0xffffff, .1  , 100 );
+light.position.set(-.15, 1.5, -.23 );
+
+const light2 = new THREE.PointLight( 0xffffff, .1  , 100 );
+light2.position.set(-.25, 1.1, -.23 );
+const lightHelper = new THREE.PointLightHelper(light)
+scene.add( light ,alight, directionalLight, lightHelper);
+
 
 const loader = new GLTFLoader()
+// loader.load('./adamHead/adamHead.gltf', (gltf) => {
+  // loader.load('./bot.gltf', (gltf) => {
 loader.load('./adamHead/adamHead.gltf', (gltf) => {
   console.log('loading model');
   const mesh = gltf.scene;
@@ -71,11 +83,11 @@ loader.load('./adamHead/adamHead.gltf', (gltf) => {
       child
     }
   });
-
-  mesh.position.set(0, 1.05, -1);
+  // mesh.rotation.x = .1;
+  mesh.position.set(0, 1.05, 0);
   scene.add(mesh);
 
-  document.getElementById('progress-container').style.display = 'none';
+  
 }, (xhr) => {
   console.log(`loading ${xhr.loaded / xhr.total * 100}%`);
 }, (error) => {
@@ -83,12 +95,14 @@ loader.load('./adamHead/adamHead.gltf', (gltf) => {
 });
 
 window.addEventListener('resize', () => {
-  camera.aspect = (window.innerWidth * (4/10)) / window.innerHeight;
+  console.log(document.getElementById("p3left").getBoundingClientRect().width)
+  camera.aspect = (document.getElementById("p3left").getBoundingClientRect().width) / window.innerHeight;
   camera.updateProjectionMatrix();
-  renderer.setSize(window.innerWidth * (4/10), window.innerHeight);
+  renderer.setSize((document.getElementById("p3left").getBoundingClientRect().width), window.innerHeight);
 });
 
 function animate() {
+  
   requestAnimationFrame(animate);
   controls.update();
   renderer.render(scene, camera);
@@ -107,6 +121,7 @@ animate();
   width: 100%;;  
 }
 #canvas{
-  max-width: 50%;
+border: 2px black solid;
+width: 50%;
 }
 </style>
