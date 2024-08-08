@@ -60,10 +60,10 @@ let linkInfo = [{
     <FAQ></FAQ>
   </div>
   <div id="p4left">
-    <h1 id="relLink">Relevant Links</h1>
+    <!-- <h1 id="relLink">Relevant Links</h1>
     <div v-for="i in linkInfo" class="linkBox">
 <p>{{ i.title }}</p>
-    </div>
+    </div> -->
   </div>
 </div>
 </div>
@@ -111,12 +111,10 @@ text-align: center;
   overflow: auto;
   height:100%;
   width:47.5%;
-  background-color: rgba(0, 255, 81, 0.5);
+  background-image: url('https://robotics.epiclabsllc.org/wp-content/uploads/2024/04/ExpeditionCenterstage-StatesTeamPic_1-scaled.jpeg');
   /* background-image: url('https://i.redd.it/q0ci022kteb61.jpg'); */
-  background-position: cover;
-  display: flex;
-  flex-direction: column;
-align-items: center;
+  /* background-position: cover; */
+  background-size: cover;
 }
 #p4right{
 height: 100%;

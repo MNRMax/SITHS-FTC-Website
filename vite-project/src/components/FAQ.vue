@@ -5,7 +5,7 @@
 
   <div v-for="i in info" class="accordion-item">
     <div class="accordion-item-header">
-      {{ i.title }}
+     <p> {{ i.title }}</p>
     </div>
     <div class="accordion-item-body" style="max-height: auto;">
       <div class="accordion-item-body-content">
@@ -92,6 +92,8 @@ h1 {
     font-family: "Plus Jakarta Sans", sans-serif ;
   width: 90%;
   max-width: 1000px;
+  /* background-color: #1e1f23;
+  padding: 20px; */
   margin: 2rem auto;
 }
 .accordion-item {
