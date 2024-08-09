@@ -65,7 +65,7 @@ light.position.set(-.15, 1.5, -.23 );
 
 const light2 = new THREE.PointLight( 0xffffff, .1  , 100 );
 light2.position.set(-.25, 1.1, -.23 );
-// const lightHelper = new THREE.PointLightHelper(light), lightHelper
+// const lightHelper = new THREE.PointLightHelper(light), lightHelper 
 scene.add( light ,alight, directionalLight);
 
 

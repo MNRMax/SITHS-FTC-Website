@@ -4,13 +4,16 @@ import poster from '@/assets/media/poster.jpg'
 import scrollBar from '@/components/scrollBar.vue'
 import trest from '@/components/trest.vue';
 import FAQ from '@/components/FAQ.vue'
-
-let linkInfo = [{
-  icon: 'https://cdn4.iconfinder.com/data/icons/logos-brands-7/512/google_logo-google_icongoogle-512.png',
-  title: 'Google',
-  desc: 'Search your own stuff.',
-},
-]
+import foot from '@/components/footer.vue'
+let awardsList = [
+  {
+    year: 2023,
+    awards: [`Best Team That Doesn't Exist Award`,`Worlds - 1st Place`,`Staten Island Regional Semi-Finalist `],
+  },
+  {
+  year: 2024,
+  awards: ['Most Handsome Code Member (Noah Abbas)','Most Smartest Code Member (Noah Abbas)','Gabe Award (Gabriel Liberov)','Other Gabe Award (Yan Sharma)','Worlds - 1st Place ']
+}]
 </script>
 
 <template>
@@ -60,12 +63,15 @@ let linkInfo = [{
     <FAQ></FAQ>
   </div>
   <div id="p4left">
-    <!-- <h1 id="relLink">Relevant Links</h1>
-    <div v-for="i in linkInfo" class="linkBox">
-<p>{{ i.title }}</p>
-    </div> -->
+     <h1 id="relLink">Awards</h1>
+   <div v-for="i in awardsList" class="awardTab">
+    <h2 class="awardYear">{{ i.year }}</h2>
+    <p v-for="x in i.awards" class="awardText" data-aos="flip-right">{{ x }}</p>
+   </div>
+
   </div>
 </div>
+<foot></foot>
 </div>
 </template>
 
@@ -104,29 +110,44 @@ width: 52.5%;
 background-color: rgba(0,0,255,0.1);
 }
 
-
+.awardYear{
+  text-decoration: underline;
+  font-size: 2rem;
+}
+.awardTab{
+  text-align: left;
+  margin: 15px;
+}
+.awardText{
+  font-size: 1.05rem;
+  margin-left: 20px;
+}
 #p4left{
   font-family: "Plus Jakarta Sans", sans-serif ;
 text-align: center;
   overflow: auto;
   height:100%;
-  width:47.5%;
-  background-image: url('https://robotics.epiclabsllc.org/wp-content/uploads/2024/04/ExpeditionCenterstage-StatesTeamPic_1-scaled.jpeg');
+  width:34%;
+  border-left: 1px solid white;
+  /* background-image: url('https://robotics.epiclabsllc.org/wp-content/uploads/2024/04/ExpeditionCenterstage-StatesTeamPic_1-scaled.jpeg'); */
   /* background-image: url('https://i.redd.it/q0ci022kteb61.jpg'); */
   /* background-position: cover; */
-  background-size: cover;
+  background-color: #02010d;
+
 }
-#p4right{
+#p4right{ 
+  
 height: 100%;
 /* display: flex;
 justify-content: center;
 align-items: center; */
 overflow: auto;
-width: 75%;
-background-color: rgba(0,0,255,0.1);
+width: 66%;
+
+background-color: #8787a3e6;
 }
 
-
+  
 
 #page3{
   border-top: white 2px solid;
@@ -144,8 +165,8 @@ background-color: rgba(0,0,255,0.1);
   width: 100%;
   position: relative;
   display: flex;
-  justify-content: center;
-  background-color: rgb(242, 124, 124);
+  justify-content: left;
+  background-color: rgb(0, 0, 0);
 }
 
 #videoBG{
@@ -163,7 +184,7 @@ background-color: rgba(0,0,255,0.1);
   position: absolute;
   overflow: scroll;
     width: 100%;
-    height: calc(347.5vh - 65px);
+    /* height: calc(447.5vh - 65px); */
     left: 0;
     top: calc(0PX);
     /* background-color: wheat; */
