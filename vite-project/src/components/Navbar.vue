@@ -37,7 +37,7 @@ var prevScrollpos = window.pageYOffset;
     <RouterLink to="/">Home</RouterLink>
     <RouterLink to="/team">Team</RouterLink>
     <RouterLink to="/social">Social</RouterLink>
-    <RouterLink id="op" to="/options">Options</RouterLink>
+    <RouterLink id="op" to="/">Options</RouterLink>
   </div>    
 </div>
 <div id="push"></div>

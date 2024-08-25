@@ -29,12 +29,12 @@ page.appendChild(renderer.domElement);
 
 const scene = new THREE.Scene();
 
-const camera = new THREE.PerspectiveCamera(60, (document.getElementById("p3left").getBoundingClientRect().width) / window.innerHeight, 1, 1000);
+const camera = new THREE.PerspectiveCamera(10, (document.getElementById("p3left").getBoundingClientRect().width) / window.innerHeight, 1, 1000);
 camera.position.set(0, 0, 0)
 
 const controls = new OrbitControls(camera, renderer.domElement);
 // controls.enableDamping = true;
-// controls.enablePan = false;
+controls.enablePan = false;
 controls.minDistance = 5;
 controls.maxDistance = 5;
 controls.minPolarAngle = 0.5;
@@ -47,11 +47,11 @@ controls.update();
 
 const groundGeometry = new THREE.PlaneGeometry(20, 20, 32, 32);
 groundGeometry.rotateX(-Math.PI / 2);
-
-// const groundMesh = new THREE.Mesh(groundGeometry, groundMaterial);
-// groundMesh.castShadow = false;
-// groundMesh.receiveShadow = true;
-// scene.add(groundMesh);
+var groundMaterial = new THREE.MeshStandardMaterial();
+const groundMesh = new THREE.Mesh(groundGeometry, groundMaterial);
+groundMesh.castShadow = false;
+groundMesh.receiveShadow = true;
+scene.add(groundMesh);
 
 const directionalLight = new THREE.DirectionalLight( 0xffffff, 1);
 
@@ -70,8 +70,8 @@ scene.add( light ,alight, directionalLight);
 
 
 const loader = new GLTFLoader()
-loader.load('./adamHead/adamHead.gltf', (gltf) => {
-  // loader.load('./bot.gltf', (gltf) => {
+// loader.load('./abdu.gltf', (gltf) => {
+  loader.load('./vc3.glb', (gltf) => {
 // loader.load('./newbot.glb', (gltf) => {
   console.log('loading model');
   const mesh = gltf.scene;

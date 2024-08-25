@@ -23,7 +23,7 @@ let awardsList = [
       <div id="p1left">
         <div id="p1LeftContainer" data-aos="fade-right" data-aos-duration="750">
           <h1 data-aos="fade-right" >SITHS Saturn 26195</h1>
-          <p class="frontText" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+          <p class="frontText">Hello! We're SITHS Saturn, a FIRST Tech Challenge team at Staten Island Tech. Founded in 2024, we are comprised of 15 dedicated members and two coaches who constantly innovate and improve to achieve greatness. Our mission is to push the boundaries of what's thought to be possible, and compete with our peers to achieve the highest level of excellence we can strive for.</p>
           <p class="frontText" >Magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
         </div>
       </div>
@@ -63,7 +63,7 @@ let awardsList = [
     <FAQ></FAQ>
   </div>
   <div id="p4left">
-     <h1 id="relLink">Awards</h1>
+     <!-- <h1 id="relLink">Awards</h1> -->
    <div v-for="i in awardsList" class="awardTab">
     <h2 class="awardYear">{{ i.year }}</h2>
     <p v-for="x in i.awards" class="awardText" data-aos="flip-right">{{ x }}</p>
@@ -132,7 +132,7 @@ text-align: center;
   /* background-image: url('https://robotics.epiclabsllc.org/wp-content/uploads/2024/04/ExpeditionCenterstage-StatesTeamPic_1-scaled.jpeg'); */
   /* background-image: url('https://i.redd.it/q0ci022kteb61.jpg'); */
   /* background-position: cover; */
-  background-color: #02010d;
+  background-image: linear-gradient(#02010d,#05031d);
 
 }
 #p4right{ 
