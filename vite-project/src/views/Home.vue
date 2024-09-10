@@ -34,7 +34,7 @@ onMounted( () => {
 <h2 class="text-5xl text-center">About Us</h2>
 </div>
 </div>
-<div class="right min-h-[100%]  bg-cover w-1/2  ">
+<div class="right min-h-[100%]  bg-cover w-1/2  ">  
 <p>o-w</p>
 </div>
 </div>x
