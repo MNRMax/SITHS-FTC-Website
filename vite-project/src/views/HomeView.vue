@@ -249,7 +249,7 @@ h1{
   text-decoration: dotted;
   font-family: "Plus Jakarta Sans", sans-serif;
   /* background-image: linear-gradient(145deg,black,rgb(22, 22, 22)); */
-  background-color: #1e1f23;
+  background-image: linear-gradient(#1e1f23,#2a2b30);
   display: flex;
   align-items: center;
   justify-content: center;
