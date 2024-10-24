@@ -23,7 +23,6 @@
     /* height: calc(447.5vh - 65px); */
     left: 0;
     top: calc(0PX);
-    
     z-index: -10;
 }
 #tpage1{
